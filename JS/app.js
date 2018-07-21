@@ -60,7 +60,7 @@ function initCanvas () {
   var postDraw = performance.now();
   console.log("Initializing the canvas took " + (postDraw - preDraw) + " milliseconds.")
 
-  $( "#removeAfterLoad" ).html('世外桃源 香格里拉');
+  $( "#removeAfterLoad" ).html('世外桃源  比邻而居');
 }
 
 function pick(event) {
