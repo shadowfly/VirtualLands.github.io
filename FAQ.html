@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>虚拟乐土</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css"> 
-    <link href="styles.css" rel="stylesheet">
+  <title>虚拟乐土</title>
 
-      
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
+  <link href="styles.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body ng-app="OTEHP" ng-controller="MainController" id="MainControllerTag">
+</head>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container d-flex justify-content-between">
-        <a class="navbar-brand" href="#">
-          虚拟乐土
-        </a>
-  
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="./index.html">家园主页</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./FAQ.html">常见问答</a>
-            </li>
-            <!-- <li class="nav-item">
+<body ng-app="OTEHP" ng-controller="MainController" id="MainControllerTag">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container d-flex justify-content-between">
+      <a class="navbar-brand" href="#">
+        虚拟乐土
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="./index.html">家园主页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./FAQ.html">常见问答</a>
+          </li>
+          <!-- <li class="nav-item">
               <a class="nav-link active" href="./english.tml">English</a>
             </li>
             <li class="nav-item">
@@ -50,114 +52,109 @@
             <li class="nav-item">
                 <a class="nav-link " href="/me"><i class="fas fa-user"></i></a>
             </li>-->
-          </ul>
-        </div>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <section class="jumbotron text-center">
-      <div class="container">
-        <h1 class="jumbotron-heading"><span class="text-muted">FAQ</span></h1>
-      </div>
-    </section>
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">
+        <span class="text-muted">FAQ 常见问答</span>
+      </h1>
+    </div>
+  </section>
 
-    <main role="main">
+  <main role="main">
 
-      <div class="album py-5 bg-white largerPadding">
-        <div class="container text-center maxWidth60">
-        <h1 class="largerH1s">What's the goal of this website?</h1>
-        <p class="lead text-muted">This project is an introductive tutorial to building real decentralized applications (DApps) on <a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum</a>. Ethereum is a <strong>decentralized platform that runs smart contracts</strong>, applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third-party interference.</p>
-        </div>
-      </div>
-
-      <div class="album py-5 bg-white largerPadding">
-        <div class="container text-center maxWidth60">
-        <h1 class="largerH1s">Why do I need to care about Ethereum, what does it offer?</h1>
-        <p class="lead text-muted">With Smart contracts, Ethereum allow the management of value, possessions, and multiple other things. This project is powered by a Smart Contract that keeps track of parcels, and allow owners to exchange them, modify them, or sell them.</p>
-        </div>
-      </div>
-
-      <div class="album py-5 bg-white largerPadding">
-        <div class="container text-center maxWidth60">
-        <h1 class="largerH1s">Is this website real or just a simulation?</h1>
-        <p class="lead text-muted">The website is in every point <strong class="font-weight-bold">real</strong>. The pixels parcels present on the home page belong to their owner or were not acquired yet. If you own a parcel, it's yours, and <strong class="font-weight-bold">nobody can take it from you</strong>. If this website was ever taken down, your parcel will still be present on the main Ethereum blockchain, and you can access to it on etherscan for example, or you can clone the github repository of this website and set it up again on your own! You'll have access to same Smart Contract that keep track of your and the others parcels.</p>
-        </div>
-      </div>
-
-      <div class="album py-5 bg-white largerPadding">
-        <div class="container text-center maxWidth60">
-        <h1 class="largerH1s">What do I need to acquire a parcel?</h1>
-        <p class="lead text-muted">A computer running Chrome or Firefox, and have the MetaMask plugin installed on them. MetaMask is a digital wallet that allow the management of Ether, the crypto-currency of Ethereum. The Ether will allow you to acquire a parcel.</p>
-        </div>
-      </div>
-
-      <div class="album py-5 bg-white largerPadding">
-        <div class="container text-center maxWidth60">
-        <h1 class="largerH1s">How do I install MetaMask?</h1>
-        <p class="lead text-muted">In order to acquire, modify, or exchange parcels, you’ll need to install MetaMask on your Chrome or Firefox browser and load it up with ether.</p>
-        <div style="text-align: center;"><iframe width="720" height="360" src="https://www.youtube.com/embed/Vj9ztSdKSPU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
-        </div>
-      </div>
-
-      <div class="album py-5 bg-white largerPadding">
-        <div class="container text-center maxWidth60">
-        <h1 class="largerH1s">How do I get Ether?</h1>
-        <p class="lead text-muted">If you are a U.S. citizen, you can buy ether in MetaMask.</p>
-        <p class="lead text-muted">For everyone else, you will need to purchase ether from an exchange. The easiest way is using Coinbase and then transferring the ether from your Coinbase wallet to your MetaMask wallet.</p>
-        </div>
-      </div>
-
-      <div class="album py-5 bg-white largerPadding">
-        <div class="container text-center maxWidth60">
-        <h1 class="largerH1s">What's a token?</h1>
-        <p class="lead text-muted">A token is the representation of an asset in a Smart Contract. In the case of this project, it's a non-fungible token, which means that each token is different from another one, because each parcel is unique, and have unique characteristics.</p>
-        </div>
-      </div>
-
-      <div class="album py-5 bg-white largerPadding">
-        <div class="container text-center maxWidth60">
-        <h1 class="largerH1s">Is this all?</h1>
-        <p class="lead text-muted">This FAQ, like this whole website, are still under construction. Be sure to come back a bit later when more content is added!</p>
-        </div>
-      </div>
-
-    </main>
-
-    <footer class="text-muted">
-      <div class="container">
-        <p class="float-right">
-          <a href="" onclick="scrollToTop()">Back to top</a>
+    <div class="album py-5 bg-white largerPadding">
+      <div class="container text-center maxWidth60">
+        <h1 class="largerH1s">此网站的作用?</h1>
+        <p class="lead text-muted">去中心化程序，运行于区块链之上，没人能干涉和修改。其上的合约程序和数据都是公开可见的。 本网站提供简单直接的界面，帮助用户和区块链程序进行互动，发送交易，读取信息等。即，购买香格里拉虚拟乐土的地块，更改 地块相关信息，挂牌转让地块，取回自己名下的以太币等。即使本网站被破坏或关停，您的区块链上的信息和地块拥有权，永远存在。
+          您还可以通过其它软件访问区块链上对应于本虚拟游戏的智能合约。 或编辑本项目github/VirtualLands/VirtualLands.github.io，自己建立网站。
         </p>
-        <p>The 1000 Ξ homepage</p>
-        <p>Want to know more? <a href="/FAQ">Visit the FAQ</a> or contact me <a  href="mailto:info@1000ethhomepage.com">by mail</a>!</p>
       </div>
-    </footer>
+    </div>
 
-    <!-- Scripts -->
+    <div class="album py-5 bg-white largerPadding">
+      <div class="container text-center maxWidth60">
+        <h1 class="largerH1s">项目有版权吗？</h1>
+        <p class="lead text-muted"> 本项目为MIT开源软件。感兴趣的机构或个人，可以拷贝，修改本软件，并发布自己的软件。 包括区块链智能合约，以及网站前端软件。
+        </p>
+      </div>
+    </div>
 
-    <!-- Bootstrap 4 -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <div class="album py-5 bg-white largerPadding">
+      <div class="container text-center maxWidth60">
+        <h1 class="largerH1s">这是真实的还是虚拟的？</h1>
+        <p class="lead text-muted">智能合约是真实并公开的，游戏是虚拟的，您拥有的是虚拟的地块，是世外桃源，虚拟乐土。
+        </p>
+      </div>
+    </div>
 
-    <!-- Angular JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script>
+    <div class="album py-5 bg-white largerPadding">
+      <div class="container text-center maxWidth60">
+        <h1 class="largerH1s">如何购买和管理香格里拉虚拟乐土？</h1>
+        <p class="lead text-muted">一台电脑，Chrome 或 Firefox浏览器, MetaMask浏览器插件。 MetaMask是一款数字钱包软件，用来管理以太币。使用以太币来购买地块。如果觉得转让，转让成功后，您的余额可随时提取。
+        </p>
+      </div>
+    </div>
 
-    <!-- IPFS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+    <div class="album py-5 bg-white largerPadding">
+      <div class="container text-center maxWidth60">
+        <h1 class="largerH1s">香格里拉地块的发售价格，是不是太贵？不过一款游戏而已！</h1>
+        <p class="lead text-muted">他人努力工作时，俺们在写代码；他人加班工作时，俺们在写代码；他人下班回家时，俺们在写代码； 他人花前月下，情深意浓时，俺们还在写代码！ 天可怜见，各位兄弟姐妹，赞助点外卖钱吧。
+        </p>
+      </div>
 
-    <!-- Big Number -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/6.0.0/bignumber.min.js"></script>
+      <div class="album py-5 bg-white largerPadding">
+        <div class="container text-center maxWidth60">
+          <h1 class="largerH1s">就这些了吗？</h1>
+          <p class="lead text-muted">智能合约不可修改。网站界面不断优化。请留下宝贵意见。
+          </p>
+        </div>
+      </div>
 
-    <!-- Color picker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+  </main>
 
-    <!-- Smart contract interaction -->
-    <script src="https://cdn.jsdelivr.net/npm/web3@0.20.6/dist/web3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/truffle-contract@3.0.4/dist/truffle-contract.min.js"></script>
-    <script src="./JS/angularApp.js"></script>
-    <script src="./JS/app.js"></script>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="" onclick="scrollToTop()">返回顶端</a>
+      </p>
+      <p>VirtualLands 香格里拉</p>
+      <p>欲了解更多？
+        <a href="/FAQ">访问FAQ</a> 或联系我
+        <a href="mailto:HooSeaTone@163.com">电子邮件</a>!</p>
+    </div>
+  </footer>
 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  </body>
+  <!-- Scripts -->
+
+  <!-- Bootstrap 4 -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Angular JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.min.js"></script>
+
+  <!-- IPFS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
+
+  <!-- Big Number -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/6.0.0/bignumber.min.js"></script>
+
+  <!-- Color picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+
+  <!-- Smart contract interaction -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@0.20.6/dist/web3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/truffle-contract@3.0.4/dist/truffle-contract.min.js"></script>
+  <script src="./JS/angularApp.js"></script>
+  <script src="./JS/app.js"></script>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</body>
+
 </html>
