@@ -70,3 +70,7 @@ h3 .card-title {
   font-size: 3em;
   margin-bottom: .25em;
 }
+.textarea {  
+	font-size:16px;
+	background-color:rgb(204,232,207);
+}

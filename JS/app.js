@@ -1,4 +1,13 @@
 // -----------------------------------------------------------------------------------------------------------
+// --------------------------------------------------- Variables --------------------------------------------
+// -----------------------------------------------------------------------------------------------------------
+
+
+var scope;
+var startBlock = 6012900;
+
+
+// -----------------------------------------------------------------------------------------------------------
 // --------------------------------------------------- Web3 inits --------------------------------------------
 // -----------------------------------------------------------------------------------------------------------
 
@@ -10,12 +19,12 @@ function initWeb3() {
       web3 = new Web3(web3Provider);
     } else {    
       console.error('No web3 provider found. Please install Metamask on your browser.');
-      alert('未发现可用web3，请使用Chrome浏览器并安装Metamask插件。');
+      alert('未发现可用web3，请在浏览器中安装Metamask插件。');
     }
     initVirtualLandsContract();
   }
   
-  var scope;
+
   
   function initVirtualLandsContract () {
     // the file VirtualLands.json contains the ABI of the smart contract, and the address 
@@ -43,15 +52,12 @@ function initWeb3() {
   
   function initCanvas () {
     var preDraw = performance.now();
-    for (var i = 0; i < 1000; i++) {
-      for (var j = 0; j < 1000; j++) {
-        if(i % 10 != 0)
-          context.fillStyle = '#FFFFFF';
-        else 
-          context.fillStyle = '#00FF00';
-  
-        if(j % 10 == 0) 
+    for (let i = 0; i < 1000; i++) {
+      for (let j = 0; j < 1000; j++) {
+        if(i % 10 == 0 || j % 10 == 0)
           context.fillStyle = '#E7E7E7';
+        else 
+          context.fillStyle = '#FFFFFF';        
   
         context.fillRect(j, i, 1, 1);
       }
@@ -119,15 +125,12 @@ function initWeb3() {
   function initBigPixelsCanvas () {
   
     var preDraw = performance.now();
-    for (var i = 0; i < 300; i++) {
-      for (var j = 0; j < 300; j++) {
-        if(i % 30 != 0)
-          contextBPC.fillStyle = '#FFFFFF';
+    for (let i = 0; i < 300; i++) {
+      for (let j = 0; j < 300; j++) {
+        if(i % 30 == 0 || j % 30 == 0)
+          contextBPC.fillStyle = '#E7E7E7';
         else 
-          contextBPC.fillStyle = '#E7E7E7';
-  // paint the inside too
-        if(j % 30 == 0) 
-          contextBPC.fillStyle = '#E7E7E7';
+          contextBPC.fillStyle = '#FFFFFF';  
   
         contextBPC.fillRect(j, i, 1, 1);
       }

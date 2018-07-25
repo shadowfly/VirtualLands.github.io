@@ -6,7 +6,7 @@ angular.module('OTEHP', [])
     $scope.tokenInfos = []; // id of token => object of infos
     $scope.initialPrice = 10; //in finney
     $scope.landPrice = [];   // id of token => price of land
-
+    
     // Main canvas 
     $scope.cHOTID = 0; // currently hovered over token iD
 
@@ -29,11 +29,13 @@ angular.module('OTEHP', [])
     $scope.updateCHOSquare = function (currentlyHoveredOverSquare) {
       $scope.cHOSquare = currentlyHoveredOverSquare;
       $scope.$apply();
-    }
+    }   
+
 
     $scope.getEvents = function () {
+
       VTLContract.deployed().then(function (instance) {
-        instance.EmitChangedPixelsColors({}, { fromBlock: 0, toBlock: 'latest' }).watch((error, eventResult) => {
+        instance.EmitChangedPixelsColors({}, { fromBlock: startBlock, toBlock: 'latest' }).watch((error, eventResult) => {
           if (error)
             console.log('Error in EmitInitialAuction event handler: ' + error);
           else {
@@ -52,7 +54,7 @@ angular.module('OTEHP', [])
           }
         });
 
-        instance.EmitChangedDescription({}, { fromBlock: 0, toBlock: 'latest' }).watch((error, eventResult) => {
+        instance.EmitChangedDescription({}, { fromBlock: startBlock, toBlock: 'latest' }).watch((error, eventResult) => {
           if (error)
             console.log('Error in EmitChangedDescription event handler: ' + error);
           else {
@@ -67,7 +69,7 @@ angular.module('OTEHP', [])
           }
         });
 
-        instance.EmitChangedLink({}, { fromBlock: 0, toBlock: 'latest' }).watch((error, eventResult) => {
+        instance.EmitChangedLink({}, { fromBlock: startBlock, toBlock: 'latest' }).watch((error, eventResult) => {
           if (error)
             console.log('Error in EmitChangedLink event handler: ' + error);
           else {
@@ -82,7 +84,7 @@ angular.module('OTEHP', [])
           }
         });
 
-        instance.EmitUpForSale({}, { fromBlock: 0, toBlock: 'latest' }).watch((error, eventResult) => {
+        instance.EmitUpForSale({}, { fromBlock: startBlock, toBlock: 'latest' }).watch((error, eventResult) => {
           if (error)
             console.log('Error in EmitChangedLink event handler: ' + error);
           else {
@@ -101,7 +103,7 @@ angular.module('OTEHP', [])
           }
         });
 
-        instance.EmitBought({}, { fromBlock: 0, toBlock: 'latest' }).watch((error, eventResult) => {
+        instance.EmitBought({}, { fromBlock: startBlock, toBlock: 'latest' }).watch((error, eventResult) => {
           if (error)
             console.log('Error in EmitInitialAuction event handler: ' + error);
           else {
@@ -344,9 +346,7 @@ angular.module('OTEHP', [])
             }).then(function (result) {
               let balance = web3.fromWei(result, 'Ether');
               console.log("My balance is: " + balance);
-              $('#showBalance').html("我在本游戏中拥有的以太币余额为： " + balance + " 以太币。");
-              $('#showWithdraw').html(" 余额为0时请勿提取，以免浪费交易手续费。");           
-            
+              $('#myShow').html("我在本游戏中拥有的以太币余额为： " + balance + " 以太币。余额为0时请勿提取，以免浪费交易手续费。");      
             }).catch(function (err) {
               console.log(err.message); 
               alert('查询余额失败。');
@@ -368,8 +368,7 @@ angular.module('OTEHP', [])
               console.log("current accounts: " + accounts[0]);
               return instance.withdraw();
             }).then(function (result) {              
-              $('#showWithdraw').html("    我在本游戏中拥有的以太币余额已提取。");           
-              $('#showBalance').html(""); 
+              $('#myShow').html("    我在本游戏中拥有的以太币余额已提取。");               
             }).catch(function (err) {
               console.log(err.message);
               alert('提取余额失败。');
@@ -378,6 +377,19 @@ angular.module('OTEHP', [])
             
           }
         }
+      });
+    }
+
+    // to be called later.
+    $scope.getInitialPrice = function () {
+      VTLContract.deployed().then(function (instance) {
+        return instance.initialPrice.call();
+      }).then(function (initialPrice) {
+        $scope.initialPrice = web3.fromWei(initialPrice, 'finney');       
+        console.log("地块初始发售价格查询结果： " + $scope.initialPrice + "finney");
+      }).catch(function (err) {
+        console.log(err.message);
+        alert('查询初始发售价格失败。');
       });
     }
 
