@@ -19,7 +19,7 @@ function initWeb3() {
       web3 = new Web3(web3Provider);
     } else {    
       console.error('No web3 provider found. Please install Metamask on your browser.');
-      alert('未发现可用web3，请在浏览器中安装Metamask插件。');
+      alert('请安装Metamask插件并连接至主网络。');
     }
     initVirtualLandsContract();
   }
