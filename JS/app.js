@@ -19,7 +19,7 @@ function initWeb3() {
       web3 = new Web3(web3Provider);
     } else {    
       console.error('No web3 provider found. Please install Metamask on your browser.');
-      alert('请安装Metamask插件并连接至主网络。');
+      alert('请安装钱包插件并连接至主网络。');
     }
     initVirtualLandsContract();
   }
@@ -66,7 +66,7 @@ function initWeb3() {
     var postDraw = performance.now();
     console.log("Initializing the canvas took " + (postDraw - preDraw) + " milliseconds.")
   
-    $( "#removeAfterLoad" ).html('世外桃源    比邻而居    一旦拥有    终生拥有');
+    $( "#removeAfterLoad" ).html('你在虚拟世界拥有的第一块土地资产');
   }
   
   function pick(event) {

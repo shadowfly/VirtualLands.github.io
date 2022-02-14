@@ -164,7 +164,7 @@ angular.module('OTEHP', [])
           console.log(error);
         } else {
           if (accounts.length <= 0) {
-            alert("账户未解锁，请登录MataMask并指定交易账户。")
+            alert("账户未解锁，请登录钱包并指定交易账户。")
           } else {
             VTLContract.deployed().then(function (instance) {
               var _newColors = arrayOfColorsToString($scope.tokenInfos[$scope.cHOTID_clicked].colorsArray)
@@ -189,7 +189,7 @@ angular.module('OTEHP', [])
           console.log(error);
         } else {
           if (accounts.length <= 0) {
-            alert("账户未解锁，请登录MataMask并指定交易账户。")
+            alert("账户未解锁，请登录钱包并指定交易账户。")
           } else {
             VTLContract.deployed().then(function (instance) {
               var _newDescription = $scope.tokenInfos[$scope.cHOTID_clicked].description;
@@ -212,7 +212,7 @@ angular.module('OTEHP', [])
           console.log(error);
         } else {
           if (accounts.length <= 0) {
-            alert("账户未解锁，请登录MataMask并指定交易账户。")
+            alert("账户未解锁，请登录钱包并指定交易账户。")
           } else {
             VTLContract.deployed().then(function (instance) {
               var _newLink = $scope.tokenInfos[$scope.cHOTID_clicked].link;
@@ -239,7 +239,7 @@ angular.module('OTEHP', [])
           console.log(error);
         } else {
           if (accounts.length <= 0) {
-            alert("账户未解锁，请登录MataMask并指定交易账户。")
+            alert("账户未解锁，请登录钱包并指定交易账户。")
           } else {
             VTLContract.deployed().then(function (instance) {
               let newPrice_finney = $scope.tokenInfos[$scope.cHOTID_clicked].price;
@@ -271,7 +271,7 @@ angular.module('OTEHP', [])
           console.log(error);
         } else {
           if (accounts.length <= 0) {
-            alert("账户未解锁，请登录MataMask并指定交易账户。")
+            alert("账户未解锁，请登录钱包并指定交易账户。")
           } else {
             VTLContract.deployed().then(function (instance) {
               return instance.initialPrice.call();
@@ -306,7 +306,7 @@ angular.module('OTEHP', [])
           console.log(error);
         } else {
           if (accounts.length <= 0) {
-            alert("账户未解锁，请登录MataMask并指定交易账户。")
+            alert("账户未解锁，请登录钱包并指定交易账户。")
           } else {
             VTLContract.deployed().then(function (instance) {
               return instance.tokenToSalePrice($scope.cHOTID_clicked);
@@ -362,7 +362,7 @@ angular.module('OTEHP', [])
           console.log(error);
         } else {
           if (accounts.length <= 0) {
-            alert("账户未解锁，请登录MataMask并指定交易账户。")
+            alert("账户未解锁，请登录钱包并指定交易账户。")
           } else {
             VTLContract.deployed().then(function (instance) {
               console.log("current accounts: " + accounts[0]);
